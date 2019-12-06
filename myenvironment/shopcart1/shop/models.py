@@ -15,6 +15,7 @@ class Category(models.Model):
         return '{}'.format(self.name)
 
 class Product(models.Model):
+    objects = None
     name = models.CharField(max_length=250, unique=True)
     slug = models.SlugField(max_length=250, unique=True)
     description = models.TextField(blank=True)
